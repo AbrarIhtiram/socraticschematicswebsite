@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Socratic Schematics — Contact</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root { --navy: #0b2545; }
+</style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+<!-- Header -->
+<header class="bg-[var(--navy)] text-white sticky top-0 z-40">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-xl font-bold">SS</div>
+      <div>
+        <div class="font-bold text-lg">Socratic Schematics</div>
+        <div class="text-sm opacity-90">Karl G. Maeser Preparatory Academy — Team 8885</div>
+      </div>
+    </div>
+    <nav class="hidden md:flex gap-6 items-center">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="robots.html" class="hover:underline">Robots</a>
+      <a href="team.html" class="hover:underline">Team</a>
+      <a href="sponsors.html" class="hover:underline">Sponsors</a>
+      <a href="snacks.html" class="hover:underline">Snack Prices</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
+      <a href="gallery.html" class="btn-sm bg-white text-[var(--navy)] font-semibold rounded px-3 py-1">Gallery</a>
+    </nav>
+    <button class="md:hidden" id="mobile-nav-toggle" aria-label="Toggle navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+  <div class="md:hidden bg-white text-[var(--navy)] px-4 py-3 hidden" id="mobile-nav">
+    <a href="index.html" class="block py-1">Home</a>
+    <a href="robots.html" class="block py-1">Robots</a>
+    <a href="team.html" class="block py-1">Team</a>
+    <a href="sponsors.html" class="block py-1">Sponsors</a>
+    <a href="snacks.html" class="block py-1">Snack Prices</a>
+    <a href="contact.html" class="block py-1">Contact</a>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="max-w-4xl mx-auto px-4 py-10">
+  <h1 class="text-3xl font-bold mb-6 text-center">Contact Us</h1>
+  <p class="mb-8 text-center">Reach out to Team 8885 via email, phone, or Instagram, or use the form below!</p>
+
+  <div class="grid md:grid-cols-2 gap-8 mb-10">
+    <div class="bg-white p-6 rounded shadow space-y-4">
+      <h2 class="text-xl font-semibold mb-2">Contact Info</h2>
+      <p><strong>Email:</strong> <a href="mailto:socraticschematics@gmail.com" class="text-[var(--navy)] hover:underline">socraticschematics@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+1234567890" class="text-[var(--navy)] hover:underline">(123) 456-7890</a></p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/socraticschematics" target="_blank" class="text-[var(--navy)] hover:underline">@socraticschematics</a></p>
+    </div>
+
+    <div class="bg-white p-6 rounded shadow">
+      <h2 class="text-xl font-semibold mb-4">Send Us a Message</h2>
+      <form class="space-y-4" action="#" method="POST">
+        <div>
+          <label class="block mb-1 font-medium" for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--navy)]" required>
+        </div>
+        <div>
+          <label class="block mb-1 font-medium" for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--navy)]" required>
+        </div>
+        <div>
+          <label class="block mb-1 font-medium" for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Your message here..." class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--navy)]" required></textarea>
+        </div>
+        <button type="submit" class="bg-[var(--navy)] text-white font-semibold px-4 py-2 rounded hover:bg-opacity-90">Send Message</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-white border-t py-6">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div>
+      <div class="font-semibold">Socratic Schematics — Team 8885</div>
+      <div class="text-sm text-gray-600">Karl G. Maeser Preparatory Academy</div>
+    </div>
+    <div class="flex gap-4 items-center">
+      <a href="sponsors.html" class="text-sm">Sponsor</a>
+      <a href="gallery.html" class="text-sm">Gallery</a>
+      <a href="donate.html" class="text-sm">Donate</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('mobile-nav-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+  toggleBtn.addEventListener('click', ()=> { mobileNav.classList.toggle('hidden'); });
+</script>
+
+</body>
+</html>

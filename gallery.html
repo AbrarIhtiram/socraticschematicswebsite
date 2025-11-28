@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Socratic Schematics — Gallery</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root { --navy: #0b2545; }
+</style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+<!-- Header -->
+<header class="bg-[var(--navy)] text-white sticky top-0 z-40">
+  <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-xl font-bold">SS</div>
+      <div>
+        <div class="font-bold text-lg">Socratic Schematics</div>
+        <div class="text-sm opacity-90">Karl G. Maeser Preparatory Academy — Team 8885</div>
+      </div>
+    </div>
+    <nav class="hidden md:flex gap-6 items-center">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="robots.html" class="hover:underline">Robots</a>
+      <a href="team.html" class="hover:underline">Team</a>
+      <a href="sponsors.html" class="hover:underline">Sponsors</a>
+      <a href="donate.html" class="hover:underline">Donate</a>
+      <a href="snacks.html" class="hover:underline">Snack Prices</a>
+      <a href="contact.html" class="hover:underline">Contact</a>
+      <a href="gallery.html" class="btn-sm bg-white text-[var(--navy)] font-semibold rounded px-3 py-1">Gallery</a>
+    </nav>
+    <button class="md:hidden" id="mobile-nav-toggle" aria-label="Toggle navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+  <div class="md:hidden bg-white text-[var(--navy)] px-4 py-3 hidden" id="mobile-nav">
+    <a href="index.html" class="block py-1">Home</a>
+    <a href="robots.html" class="block py-1">Robots</a>
+    <a href="team.html" class="block py-1">Team</a>
+    <a href="sponsors.html" class="block py-1">Sponsors</a>
+    <a href="snacks.html" class="block py-1">Snack Prices</a>
+    <a href="contact.html" class="block py-1">Contact</a>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="max-w-6xl mx-auto px-4 py-10">
+  <h1 class="text-3xl font-bold mb-6 text-center">Gallery</h1>
+  <p class="mb-8 text-center">Click on a thumbnail to view the full-size image in our Google Photos album.</p>
+
+  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+    <!-- Example thumbnails -->
+    <a href="https://photos.google.com/your-album-link" target="_blank">
+      <img src="assets/placeholder.jpg" alt="Gallery Image 1" class="w-full h-40 object-cover rounded shadow hover:scale-105 transition-transform">
+    </a>
+    <a href="https://photos.google.com/your-album-link" target="_blank">
+      <img src="assets/placeholder.jpg" alt="Gallery Image 2" class="w-full h-40 object-cover rounded shadow hover:scale-105 transition-transform">
+    </a>
+    <a href="https://photos.google.com/your-album-link" target="_blank">
+      <img src="assets/placeholder.jpg" alt="Gallery Image 3" class="w-full h-40 object-cover rounded shadow hover:scale-105 transition-transform">
+    </a>
+    <a href="https://photos.google.com/your-album-link" target="_blank">
+      <img src="assets/placeholder.jpg" alt="Gallery Image 4" class="w-full h-40 object-cover rounded shadow hover:scale-105 transition-transform">
+    </a>
+    <!-- Add more as needed -->
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-white border-t py-6">
+  <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div>
+      <div class="font-semibold">Socratic Schematics — Team 8885</div>
+      <div class="text-sm text-gray-600">Karl G. Maeser Preparatory Academy</div>
+    </div>
+    <div class="flex gap-4 items-center">
+      <a href="sponsors.html" class="text-sm">Sponsor</a>
+      <a href="gallery.html" class="text-sm">Gallery</a>
+      <a href="donate.html" class="text-sm">Donate</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById('mobile-nav-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+  toggleBtn.addEventListener('click', ()=> { mobileNav.classList.toggle('hidden'); });
+</script>
+
+</body>
+</html>
